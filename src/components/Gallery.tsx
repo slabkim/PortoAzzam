@@ -9,16 +9,12 @@ import SectionHeader from "./SectionHeader";
 
 interface GalleryItem {
   src: string;
-  category: "Photography" | "Campus" | "Organizational" | "Events";
+  category: "Photography" | "Campus" | "Organizational" | "Events" | "High School";
   alt: string;
 }
 
 const galleryItems: GalleryItem[] = [
-  {
-    src: "/assets/Foto fotonya/IMG_3506.JPG",
-    category: "Photography",
-    alt: "Creative portrait session and lifestyle photography",
-  },
+
   {
     src: "/assets/Foto fotonya/UNUD FOTO/Ketua Ocehan (obrolan receh berwawasan).JPG",
     category: "Campus",
@@ -37,7 +33,7 @@ const galleryItems: GalleryItem[] = [
   {
     src: "/assets/Foto fotonya/Organisasi/MUNCOMM/DSC08643.JPG",
     category: "Organizational",
-    alt: "Udayana MUN Community committee meeting",
+    alt: "Udayana MUN Community committee",
   },
   {
     src: "/assets/Foto fotonya/Organisasi/Akademik himasos/AKADEMIK.png",
@@ -47,12 +43,32 @@ const galleryItems: GalleryItem[] = [
   {
     src: "/assets/Foto fotonya/Organisasi/Intern bem fisip/DSCF2547.JPG",
     category: "Organizational",
-    alt: "BEM FISIP internship event and decoration",
+    alt: "Internship BEM",
   },
   {
     src: "/assets/Foto fotonya/SMK/2023_04_15_16_28_IMG_3624.JPG",
-    category: "Campus",
-    alt: "SMK practical bootcamp and collaboration",
+    category: "High School",
+    alt: "Film making FLS2n as a director and scriptwriter",
+  },
+  {
+    src: "/assets/Foto fotonya/galery/Koordinator Sie acara Seminas Nasional.jpg",
+    category: "Organizational",
+    alt: "Koordinator Sie Acara Seminar Nasional",
+  },
+  {
+    src: "/assets/Foto fotonya/galery/Open House FISIP.JPG",
+    category: "Events",
+    alt: "Open House FISIP",
+  },
+  {
+    src: "/assets/Foto fotonya/galery/SIE Sponshorship Socius day.jpg",
+    category: "Organizational",
+    alt: "Sie Sponsorship Socius Day",
+  },
+  {
+    src: "/assets/Foto fotonya/galery/Sosialisasi Untuk Perempuan Intern-BEM FISIP.JPG",
+    category: "Organizational",
+    alt: "Sosialisasi Untuk Perempuan - Intern BEM FISIP",
   },
 ];
 

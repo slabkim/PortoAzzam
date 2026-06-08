@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 interface GalleryItem {
   src: string;
-  category: "Photography" | "Campus" | "Organizational" | "Events";
+  category: "Photography" | "Campus" | "Organizational" | "Events" | "Film Making" | "High School";
   alt: string;
 }
 
@@ -18,121 +18,126 @@ const moreGalleryItems: GalleryItem[] = [
   {
     src: "/assets/Foto fotonya/Jegeg bagus sosio foto/IMG_0171.jpg",
     category: "Photography",
-    alt: "Outdoor creative portrait session under natural lighting",
+    alt: "Outdoor portrait photoshoot for Jegeg Bagus Sosiologi, captured entirely utilizing natural light.",
   },
   {
     src: "/assets/Foto fotonya/Jegeg bagus sosio foto/IMG_0179.jpg",
     category: "Photography",
-    alt: "Creative portrait session showcasing lifestyle styling",
+    alt: "Outdoor portrait photoshoot for Jegeg Bagus Sosiologi, captured entirely utilizing natural light.",
   },
   {
     src: "/assets/Foto fotonya/Jegeg bagus sosio foto/IMG_0188.jpg",
     category: "Photography",
-    alt: "High-end editorial photoshoot for Jegeg Bagus Sosiologi representatives",
+    alt: "Outdoor portrait photoshoot for Jegeg Bagus Sosiologi, captured entirely utilizing natural light.",
   },
   {
     src: "/assets/Foto fotonya/Jegeg bagus sosio foto/IMG_0200.jpg",
     category: "Photography",
-    alt: "Studio portrait modeling creative lifestyle concepts",
+    alt: "Outdoor portrait photoshoot for Jegeg Bagus Sosiologi, captured entirely utilizing natural light.",
   },
   {
     src: "/assets/Foto fotonya/Jegeg bagus sosio foto/IMG_0209.jpg",
     category: "Photography",
-    alt: "Editorial photoshoot highlighting style and lighting",
+    alt: "Outdoor portrait photoshoot for Jegeg Bagus Sosiologi, captured entirely utilizing natural light.",
   },
   {
     src: "/assets/Foto fotonya/Jegeg bagus sosio foto/IMG_0224.jpg",
     category: "Photography",
-    alt: "Behind-the-scenes portrait preparation and directing",
+    alt: "Outdoor portrait photoshoot for Jegeg Bagus Sosiologi, captured entirely utilizing natural light.",
   },
   {
     src: "/assets/Foto fotonya/Jegeg bagus sosio foto/IMG_0227.jpg",
     category: "Photography",
-    alt: "Creative portrait session for team representatives",
+    alt: "Outdoor portrait photoshoot for Jegeg Bagus Sosiologi, captured entirely utilizing natural light.",
   },
   {
     src: "/assets/Foto fotonya/Jegeg bagus sosio foto/IMG_0279.jpg",
     category: "Photography",
-    alt: "Creative fashion portrait framing details and styling",
+    alt: "Outdoor portrait photoshoot for Jegeg Bagus Sosiologi, captured entirely utilizing natural light.",
   },
   {
     src: "/assets/Foto fotonya/Jegeg bagus sosio foto/IMG_0287.jpg",
     category: "Photography",
-    alt: "Portrait session capturing details under soft lighting",
+    alt: "Outdoor portrait photoshoot for Jegeg Bagus Sosiologi, captured entirely utilizing natural light.",
   },
 
+  {
+    src: "/assets/Foto fotonya/galery/Koordinator Sie acara Seminas Nasional.jpg",
+    category: "Organizational",
+    alt: "Koordinator Sie Acara Seminar Nasional",
+  },
+  {
+    src: "/assets/Foto fotonya/galery/Open House FISIP.JPG",
+    category: "Events",
+    alt: "Open House FISIP",
+  },
+  {
+    src: "/assets/Foto fotonya/galery/SIE Sponshorship Socius day.jpg",
+    category: "Organizational",
+    alt: "Sie Sponsorship Socius Day",
+  },
+  {
+    src: "/assets/Foto fotonya/galery/Sosialisasi Untuk Perempuan Intern-BEM FISIP.JPG",
+    category: "Organizational",
+    alt: "Sosialisasi Untuk Perempuan - Intern BEM FISIP",
+  },
   // Campus
   {
     src: "/assets/Foto fotonya/UNUD FOTO/IMG_2694.JPG",
     category: "Campus",
-    alt: "Campus academic debate and presentation activities",
+    alt: "Chairperson for HIMASOS's 'Ocehan' talk show forum, heading the execution of casual, thought-provoking academic discussion sessions",
   },
   {
     src: "/assets/Foto fotonya/UNUD FOTO/Koordinator Ilmiah dan Kontribusi.jpeg",
     category: "Campus",
-    alt: "Scientific presentation and academic project coordination",
-  },
-  {
-    src: "/assets/Foto fotonya/UNUD FOTO/WhatsApp Image 2026-02-27 at 22.01.33 (2).jpeg",
-    category: "Campus",
-    alt: "Universitas Udayana campus organization sharing session",
+    alt: "Koordinator ilmiah dan kontribusi at Sosiology ospek \"KIsS\"",
   },
   {
     src: "/assets/Foto fotonya/SMK/2022_12_10_22_01_IMG_9519.JPG",
-    category: "Campus",
-    alt: "SMK class programming bootcamp and student collaborations",
+    category: "High School",
+    alt: "Selected as a school representative for the National SMK Digital Bootcamp event held in Bali.",
   },
   {
     src: "/assets/Foto fotonya/SMK/2023_02_07_23_46_IMG_1615.JPG",
-    category: "Campus",
-    alt: "Vocational high school team coding project review",
+    category: "High School",
+    alt: "Directing Filmaking FLS2n Kabupaten Tanggamus",
   },
   {
     src: "/assets/Foto fotonya/SMK/2023_02_08_01_18_IMG_1613.JPG",
-    category: "Campus",
-    alt: "Collaborative design workshop during school bootcamp",
+    category: "High School",
+    alt: "Collaborative short film production and on-set teamwork for the FLS2N film competition.",
   },
   {
     src: "/assets/Foto fotonya/SMK/2023_02_18_14_43_IMG_2032.JPG",
-    category: "Campus",
-    alt: "SMK regional project presentation and group work",
+    category: "Film Making",
+    alt: "Behind-the-scenes directing and scriptwriting for an independent short movie production.",
   },
   {
     src: "/assets/Foto fotonya/SMK/2023_02_25_23_36_IMG_2255.JPG",
-    category: "Campus",
-    alt: "National bootcamp student team building activities",
+    category: "Film Making",
+    alt: "On-set directing and scriptwriting for a short film project submitted to Festival Film Lampung.",
   },
 
   // Organizational
   {
     src: "/assets/Foto fotonya/Organisasi/Akademik himasos/IMG_3629.JPG",
     category: "Organizational",
-    alt: "HIMASOS Academic division coordinator discussion session",
-  },
-  {
-    src: "/assets/Foto fotonya/Organisasi/Akademik himasos/WhatsApp Image 2025-12-31 at 20.19.21 (1).jpeg",
-    category: "Organizational",
-    alt: "Division planning and organizational team alignment",
+    alt: "Academic HIMASOS",
   },
   {
     src: "/assets/Foto fotonya/Organisasi/Intern bem fisip/2024_10_19_13_32_IMG_3637.JPG",
     category: "Organizational",
-    alt: "BEM FISIP student body internship induction program",
+    alt: "Community outreach program during BEM FISIP internship, focusing on early childhood eco-education through creative upcycling activities.",
   },
   {
     src: "/assets/Foto fotonya/Organisasi/Intern bem fisip/2024_11_20_05_00_IMG_5293.JPG",
     category: "Organizational",
-    alt: "Internship program coordination meeting for social action projects",
+    alt: "Internship BEM FISIP",
   },
   {
     src: "/assets/Foto fotonya/Organisasi/Intern bem fisip/2024_12_08_23_43_IMG_5698.JPG",
     category: "Organizational",
-    alt: "BEM FISIP team sharing session and logistics check",
-  },
-  {
-    src: "/assets/Foto fotonya/Organisasi/Intern bem fisip/DSCF2048.JPG",
-    category: "Organizational",
-    alt: "BEM FISIP logistics and PDD division project planning",
+    alt: "Group portrait of the BEM FISIP student internship participants during the program's field execution.",
   },
   {
     src: "/assets/Foto fotonya/Organisasi/MUNCOMM/DSC08644.JPG",
@@ -141,15 +146,11 @@ const moreGalleryItems: GalleryItem[] = [
   },
 
   // Events
-  {
-    src: "/assets/Foto fotonya/Work/Smart tech academy/2023_11_10_17_39_IMG_9630.JPG",
-    category: "Events",
-    alt: "Smart Tech Academy bootcamp training instruction",
-  },
+
   {
     src: "/assets/Foto fotonya/Work/Smart tech academy/2023_11_23_12_22_IMG_0577.JPG",
     category: "Events",
-    alt: "Bootcamp graduation presentation and final project demonstration",
+    alt: "Invited as a guest speaker for an elementary school robotics workshop, facilitating hands-on sessions on basic robot assembly",
   },
 ];
 

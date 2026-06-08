@@ -29,62 +29,84 @@ const certifications = [
   },
 ];
 
-const columns = [
-  // Column 1 (Portrait orientation / BNSP photo)
-  [
-    { src: "/assets/Foto fotonya/Sertif/2023_05_14_11_26_IMG_4722.JPG", aspect: "aspect-[3/4.2]", alt: "BNSP Certificate Portrait" },
-    { src: "/assets/Foto fotonya/Sertif/bnsp.jpeg", aspect: "aspect-[3/4.2]", alt: "BNSP Card Portrait" }
-  ],
-  // Column 2 (Landscape certificates - Panitia & Narasumber)
-  [
-    { src: "/assets/Foto fotonya/Sertif/7.png", aspect: "aspect-[4/2.85]", alt: "Obrolan Receh Panitia" },
-    { src: "/assets/Foto fotonya/Sertif/Narasumber utama.png", aspect: "aspect-[4/2.85]", alt: "Narasumber Utama" }
-  ],
-  // Column 3 (Landscape certificates - Sociology Day & Semnas)
-  [
-    { src: "/assets/Foto fotonya/Sertif/1 (2).png", aspect: "aspect-[4/2.85]", alt: "Sociology Day" },
-    { src: "/assets/Foto fotonya/Sertif/19.png", aspect: "aspect-[4/2.85]", alt: "Seminar Nasional" }
-  ],
-  // Column 4 (Additional landscape credentials)
-  [
-    { src: "/assets/Foto fotonya/Sertif/53.png", aspect: "aspect-[4/2.85]", alt: "Certificate 53" },
-    { src: "/assets/Foto fotonya/Sertif/_Azzam Aziz Dzakwan.png", aspect: "aspect-[4/2.85]", alt: "Azzam Certificate 1" },
-    { src: "/assets/Foto fotonya/Sertif/Azzam Aziz Dzakwan.png", aspect: "aspect-[4/2.85]", alt: "Azzam Certificate 2" }
-  ]
+// All certificate images for the scrolling marquee
+const allCertImages = [
+  { src: "/assets/Foto fotonya/Sertif/2023_05_14_11_26_IMG_4722.JPG", aspect: "aspect-[3/4.2]", alt: "BNSP Certificate Portrait" },
+  { src: "/assets/Foto fotonya/Sertif/7.png", aspect: "aspect-[4/2.85]", alt: "Obrolan Receh Panitia" },
+  { src: "/assets/Foto fotonya/Sertif/Narasumber utama.png", aspect: "aspect-[4/2.85]", alt: "Narasumber Utama" },
+  { src: "/assets/Foto fotonya/Sertif/1 (2).png", aspect: "aspect-[4/2.85]", alt: "Sociology Day" },
+  { src: "/assets/Foto fotonya/Sertif/19.png", aspect: "aspect-[4/2.85]", alt: "Seminar Nasional" },
+  { src: "/assets/Foto fotonya/Sertif/53.png", aspect: "aspect-[4/2.85]", alt: "Certificate 53" },
+  { src: "/assets/Foto fotonya/Sertif/_Azzam Aziz Dzakwan.png", aspect: "aspect-[4/2.85]", alt: "Azzam Certificate 1" },
+  { src: "/assets/Foto fotonya/Sertif/Azzam Aziz Dzakwan.png", aspect: "aspect-[4/2.85]", alt: "Azzam Certificate 2" },
+  { src: "/assets/Foto fotonya/Sertif/Azzam Aziz Dzakwan beach clean day 18 agustus 2024.png", aspect: "aspect-[4/2.85]", alt: "Azzam Aziz Dzakwan Beach Clean Day 18 Agustus 2024" },
+  { src: "/assets/Foto fotonya/Sertif/Azzam Aziz Fisip in action.png", aspect: "aspect-[4/2.85]", alt: "Azzam Aziz Fisip In Action" },
+  { src: "/assets/Foto fotonya/Sertif/Sertifikat Panitia Live In II - Azzam Aziz Dzakwan.png", aspect: "aspect-[4/2.85]", alt: "Sertifikat Panitia Live In II - Azzam Aziz Dzakwan" },
+  { src: "/assets/Foto fotonya/Sertif/Sertifikat Safari - 13.png", aspect: "aspect-[4/2.85]", alt: "Sertifikat Safari" },
+  { src: "/assets/Foto fotonya/Sertif/bnsp.jpeg", aspect: "aspect-[3/4.2]", alt: "BNSP Card Portrait" },
 ];
+
+// Split into two rows for the double-row marquee
+const row1 = allCertImages.filter((_, i) => i % 2 === 0);
+const row2 = allCertImages.filter((_, i) => i % 2 !== 0);
+
+// Duplicate for seamless infinite loop
+const row1Doubled = [...row1, ...row1];
+const row2Doubled = [...row2, ...row2];
 
 export default function Certifications() {
   return (
     <section id="certifications" className="py-16 sm:py-24 lg:py-32 bg-[#F2F3F5]/30 backdrop-blur-[1px] relative overflow-hidden">
-      {/* Background Certificate Collage Grid — hidden on mobile to reduce clutter */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none opacity-[0.22] hidden sm:block">
-        <div className="absolute w-[120%] h-[120%] -left-[10%] -top-[10%] rotate-[-3.5deg] scale-[1.03] grid grid-cols-4 gap-8 px-8">
-          {columns.map((col, colIdx) => (
-            <div
-              key={colIdx}
-              className={`flex flex-col gap-8 ${
-                colIdx === 0 ? "mt-[-40px]" :
-                colIdx === 1 ? "mt-[60px]" :
-                colIdx === 2 ? "mt-[-10px]" : "mt-[30px]"
-              }`}
-            >
-              {col.map((cert, certIdx) => (
-                <div
-                  key={certIdx}
-                  className={`w-full relative rounded-xl overflow-hidden shadow-2xl border border-black/15 bg-white ${cert.aspect}`}
-                >
-                  <Image
-                    src={cert.src}
-                    alt={cert.alt}
-                    fill
-                    className="object-cover contrast-[1.05]"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                </div>
-              ))}
-            </div>
-          ))}
+      
+      {/* ── Infinite Scrolling Certificate Strip Background ── */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none opacity-[0.30] hidden sm:flex flex-col justify-center gap-6 py-8">
+        
+        {/* Row 1 — scrolls to the right */}
+        <div className="relative flex overflow-hidden">
+          <div
+            className="flex gap-5 animate-marquee-right"
+            style={{ width: "max-content" }}
+          >
+            {row1Doubled.map((cert, i) => (
+              <div
+                key={`r1-${i}`}
+                className={`relative flex-shrink-0 w-80 ${cert.aspect} rounded-xl overflow-hidden shadow-xl border border-black/10 bg-white`}
+              >
+                <Image
+                  src={cert.src}
+                  alt={cert.alt}
+                  fill
+                  className="object-cover contrast-[1.05]"
+                  sizes="320px"
+                />
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* Row 2 — scrolls to the left (opposite direction) */}
+        <div className="relative flex overflow-hidden">
+          <div
+            className="flex gap-5 animate-marquee-left"
+            style={{ width: "max-content" }}
+          >
+            {row2Doubled.map((cert, i) => (
+              <div
+                key={`r2-${i}`}
+                className={`relative flex-shrink-0 w-80 ${cert.aspect} rounded-xl overflow-hidden shadow-xl border border-black/10 bg-white`}
+              >
+                <Image
+                  src={cert.src}
+                  alt={cert.alt}
+                  fill
+                  className="object-cover contrast-[1.05]"
+                  sizes="320px"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
@@ -105,7 +127,7 @@ export default function Certifications() {
           </span>
           {/* Title - solid black */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-heading leading-[1.15] mb-5 text-black">
-            Certifications & Licenses
+            Certifications &amp; Licenses
           </h2>
           {/* Subtitle - solid black */}
           <p className="text-base text-black font-semibold leading-relaxed max-w-xl">

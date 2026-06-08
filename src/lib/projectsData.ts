@@ -18,7 +18,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "branded-content",
-    title: "Influencer Endorsement & Branded Content",
+    title: "Influencer Endorsement & Branded Campaign",
     tag: "Zam Studio Work",
     category: "Video Editing",
     desc: "Collaborated with 10+ national brands and partnered with influencers such as Alphi Sugoi and Vidya Susanti (vsbvi) to edit high-impact marketing videos.",
@@ -139,7 +139,7 @@ export const projects: Project[] = [
   },
   {
     slug: "branded-kanzler",
-    title: "Sosis Kanzler — Branded Content",
+    title: "Sosis Kanzler — Branded Campaign",
     category: "Video Editing",
     desc: "Produced a KOL-endorsed food video for Sosis Kanzler, following the brand brief while preserving the creator's natural persona and storytelling style.",
     longDescription: "Edited a branded endorsement video for Sosis Kanzler in collaboration with influencer Vidya Susanti (@vsbvix). The video was produced in full compliance with the brand brief — adapting product messaging to fit the KOL's casual, relatable content style, ensuring authentic delivery without compromising brand standards.",
@@ -156,7 +156,7 @@ export const projects: Project[] = [
   },
   {
     slug: "branded-garuda",
-    title: "Garuda Snack — Branded Content",
+    title: "Garuda Snack — Branded Campaign",
     category: "Video Editing",
     desc: "Created a high-retention branded video for Garuda Snack, matching the KOL's casual persona with the brand's fun and energetic identity.",
     longDescription: "Produced a short-form endorsement video for Garuda Snack collaborating with creator Vidya Susanti (@vsbvix). Followed the brand brief strictly while adapting the content to the KOL's established content style — creating a seamless integration between brand messaging and the creator's audience relationship.",
@@ -173,7 +173,7 @@ export const projects: Project[] = [
   },
   {
     slug: "branded-lemonilo",
-    title: "Lemonilo — Branded Content",
+    title: "Lemonilo — Branded Campaign",
     category: "Video Editing",
     desc: "Edited a lifestyle-style branded video for Lemonilo, integrating product benefits naturally into the KOL's daily routine narrative.",
     longDescription: "Edited a food-lifestyle branded video for Lemonilo featuring influencer Vidya Susanti. The video required a delicate balance — communicating Lemonilo's healthy product angle while keeping the creator's warm, conversational content style intact. The result is a video that feels genuine rather than promotional.",
@@ -190,7 +190,7 @@ export const projects: Project[] = [
   },
   {
     slug: "branded-theface",
-    title: "The Face Indo — Branded Content",
+    title: "The Face Indo — Branded Campaign",
     category: "Video Editing",
     desc: "Produced a beauty-product branded video for The Face Indonesia, blending skincare storytelling with the KOL's authentic review persona.",
     longDescription: "Edited a skincare endorsement video for The Face Indonesia with creator Vidya Susanti. The brief required clear product demonstration (sunscreen) while maintaining the KOL's energetic and humorous review style. The final video successfully communicates product efficacy while driving entertainment value that resonates with the target audience.",
@@ -207,7 +207,7 @@ export const projects: Project[] = [
   },
   {
     slug: "branded-kilala",
-    title: "Kilala Softlens — Branded Content",
+    title: "Kilala Softlens — Branded Campaign",
     category: "Video Editing",
     desc: "Edited a lifestyle endorsement for Kilala Softlens, naturally showcasing the product within the KOL's everyday content format.",
     longDescription: "Produced a short-form branded video for Kilala Softlens Indonesia in collaboration with Vidya Susanti. The brief focused on lifestyle integration — showing how the softlens fits naturally into the creator's daily life rather than a hard-sell approach. The video leverages the KOL's relatability to build genuine interest and trust for the product.",

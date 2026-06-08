@@ -63,9 +63,16 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
           >
             {/* Header info */}
             <motion.div variants={itemVariants} className="space-y-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 border border-[#EAEAEA] text-[10px] font-bold uppercase tracking-wider text-brand-orange">
-                {project.category}
-              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 border border-[#EAEAEA] text-[10px] font-bold uppercase tracking-wider text-brand-orange">
+                  {project.category}
+                </span>
+                {project.tag && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 border border-purple-100 text-[10px] font-bold uppercase tracking-wider text-brand-purple">
+                    {project.tag}
+                  </span>
+                )}
+              </div>
               <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight font-heading text-text-primary leading-[1.15]">
                 {project.title}
               </h1>
@@ -131,11 +138,7 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
                         Period
                       </span>
                       <span className="font-semibold text-text-primary">
-                        {project.slug === "ugm-jersey"
-                          ? "July 2023"
-                          : project.slug === "jegeg-bagus-photo"
-                          ? "September 2024"
-                          : "Ongoing / 2024"}
+                        {project.period}
                       </span>
                     </div>
                   </div>
@@ -192,6 +195,17 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
                     </li>
                   ))}
                 </ul>
+
+                {/* Achievement */}
+                {project.achievement && (
+                  <div className="p-4 rounded-xl bg-amber-50 border border-amber-100 flex gap-3 items-start">
+                    <span className="text-lg leading-none">🏆</span>
+                    <div>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 block mb-1">Achievement</span>
+                      <p className="text-sm text-amber-900 font-medium leading-relaxed">{project.achievement}</p>
+                    </div>
+                  </div>
+                )}
 
                 {/* CTA Link */}
                 <div className="pt-6">

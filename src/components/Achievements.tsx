@@ -19,7 +19,7 @@ const achievements = [
   {
     title: "Most Favorite Film Nominee",
     category: "Festival Film Lampung Nasional",
-    desc: "Nominated for the Most Favorite Film award at the prestigious national-level IIB Darmajaya Lampung Film Festival.",
+    desc: "Nominated for the Most Favorite Film \"Lampung\" award at the prestigious national-level IIB Darmajaya Lampung Film Festival.",
     image: "/assets/Foto fotonya/SMK/Nominated FFL .JPG",
     icon: <Star size={18} />,
     color: "text-brand-pink",
